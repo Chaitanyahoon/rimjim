@@ -1,13 +1,13 @@
 <script>
-  import { spring } from 'svelte/motion';
-  import { currentView } from '../store';
+  import { currentView } from "../store";
 
   const items = [
-    { id: 'home', label: 'Home', icon: '🏠' },
-    { id: 'roast', label: 'Roasts', icon: '💀' },
-    { id: 'gallery', label: 'Gallery', icon: '📸' },
-    { id: 'vibe', label: 'Vibe', icon: '🎵' },
-    { id: 'birthday', label: 'B-Day', icon: '🎂' }
+    { id: "home", label: "Home", icon: "🏠" },
+    { id: "roast", label: "Roasts", icon: "💀" },
+    { id: "vibe", icon: "🎧", label: "Vinyl Vibes" },
+    { id: "fun", icon: "🎱", label: "Fun Zone" },
+    { id: "pet", icon: "👾", label: "My Pet" },
+    { id: "birthday", icon: "🎂", label: "Birthday" },
   ];
 
   let hoveredIndex = -1;
@@ -18,13 +18,17 @@
 </script>
 
 <div class="dock-container">
-  <div class="dock" on:mouseleave={() => hoveredIndex = -1}>
+  <div class="dock" on:mouseleave={() => (hoveredIndex = -1)}>
     {#each items as item, i}
-      <button 
+      <button
         class="dock-item {$currentView === item.id ? 'active' : ''}"
         on:click={() => setView(item.id)}
-        on:mouseenter={() => hoveredIndex = i}
-        style="--scale: {hoveredIndex === i ? 1.5 : hoveredIndex !== -1 && Math.abs(hoveredIndex - i) === 1 ? 1.2 : 1}"
+        on:mouseenter={() => (hoveredIndex = i)}
+        style="--scale: {hoveredIndex === i
+          ? 1.5
+          : hoveredIndex !== -1 && Math.abs(hoveredIndex - i) === 1
+            ? 1.2
+            : 1}"
       >
         <span class="icon">{item.icon}</span>
         <span class="tooltip">{item.label}</span>
@@ -46,65 +50,64 @@
 
   .dock {
     padding: 0.8rem 1.5rem;
-    border-radius: 2.5rem; 
+    border-radius: 3rem;
     display: flex;
     gap: 0.8rem;
     align-items: flex-end;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Lighter shadow */
-    
-    /* Frosted Ice (Light Glass) */
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--shadow-soft);
+
+    /* Glass Effect */
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
   }
 
   .dock-item {
     width: 3.5rem;
     height: 3.5rem;
-    border-radius: 50%; 
-    background: rgba(255, 255, 255, 0.8); /* White items */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform: scale(var(--scale));
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    color: var(--text-primary);
+    color: var(--text-secondary);
   }
 
   .dock-item:hover {
-    background: rgba(236, 72, 153, 0.1); /* Pink tint */
-    border-color: rgba(236, 72, 153, 0.3);
-    z-index: 10;
-    box-shadow: 0 0 15px rgba(236, 72, 153, 0.2);
-    transform: translateY(-5px) scale(1.2);
+    background: #fff;
+    color: var(--accent-primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
   .dock-item.active {
     background: var(--accent-primary);
-    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
     color: white;
     border: none;
   }
 
   .tooltip {
     position: absolute;
-    top: -45px;
-    background: white;
-    color: var(--text-primary);
+    top: -50px;
+    background: rgba(30, 41, 59, 0.9);
+    color: white;
     padding: 6px 12px;
-    border-radius: 12px;
+    border-radius: 8px;
     font-size: 0.85rem;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s, transform 0.2s;
+    transition:
+      opacity 0.2s,
+      transform 0.2s;
     white-space: nowrap;
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: var(--shadow-card);
-    transform: translateY(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(10px);
     font-weight: 600;
   }
 

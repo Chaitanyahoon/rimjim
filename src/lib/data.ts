@@ -1,6 +1,6 @@
 export const rimjimData = {
   welcome: {
-    title: "Welcome to the Rimjim-Verse",
+    title: "Welcome to the RimJhim verse",
     subtext: "A tiny universe made of star dust, chaotic energy, and late-night thoughts."
   },
   about: {
@@ -19,12 +19,54 @@ export const rimjimData = {
     { id: 3, text: "Ordering way too much food and regretting nothing" },
     { id: 4, text: "Silence that doesn't feel awkward" }
   ],
-  soundtrack: [
-    { id: 1, title: "Midnight City", artist: "M83", mood: "Driving late at night" },
-    { id: 2, title: "Space Song", artist: "Beach House", mood: "Floating in the void" },
-    { id: 3, title: "Yellow", artist: "Coldplay", mood: "Soft feels" },
-    { id: 4, title: "Ribs", artist: "Lorde", mood: "Growing up is weird" }
-  ],
+  vibe: {
+    moods: [
+      {
+        id: 'chill',
+        name: 'Chill Vibes',
+        icon: '🌿',
+        color: '#10b981', // Emerald
+        playlist: [
+          { title: 'Lo-Fi Study Girl', artist: 'ChilledCow' },
+          { title: 'Rainy Day', artist: 'Atmosphere' },
+          { title: 'Silence', artist: 'My Thoughts' }
+        ]
+      },
+      {
+        id: 'chaos',
+        name: 'Pure Chaos',
+        icon: '🔥',
+        color: '#ef4444', // Red
+        playlist: [
+          { title: 'Screaming Goat', artist: 'Internet' },
+          { title: 'Dial-up Internet', artist: 'Modem' },
+          { title: 'Error 404', artist: 'Not Found' }
+        ]
+      },
+      {
+        id: 'hype',
+        name: 'Hyped Up',
+        icon: '⚡',
+        color: '#f59e0b', // Amber
+        playlist: [
+          { title: 'Gym Phonk', artist: 'Gym Bro' },
+          { title: 'Main Character Energy', artist: 'You' },
+          { title: 'Victory Screech', artist: 'SpongeBob' }
+        ]
+      },
+      {
+        id: 'sad',
+        name: 'Sad Boi Hours',
+        icon: '🌧️',
+        color: '#6366f1', // Indigo
+        playlist: [
+          { title: 'Guts Theme', artist: 'Berserk' },
+          { title: 'Unravel', artist: 'Tokyo Ghoul' },
+          { title: 'Marvin\'s Room', artist: 'Drake' }
+        ]
+      }
+    ]
+  },
   tinyThings: [
     { id: 1, text: "The specific way you say 'Okaaay'", emoji: "🙆" },
     { id: 2, text: "Your very specific coffee order", emoji: "☕" },
@@ -38,20 +80,47 @@ export const rimjimData = {
   roasts: [
     "Your sleep schedule is more inconsistent than your wifi.",
     "You say 'one more episode' like it's a binding legal contract.",
-    "Main character energy but NPC budget.",
-    "You have 50 tabs open and 0 idea where the music is coming from.",
-    "Your playlist makes no sense, just like your life choices.",
+    "Main character energy but NPC budget. 📉",
+    "You have 50 tabs open and 0 idea where the music is coming from. 🎵",
+    "Bhai, tumhara procrastination level alag hi hai. 'Kal karunga' is your anthem. 😴",
+    "Tu 'Bas 5 minute' bolke 5 saal sota hai. ⏰",
+    "Overthinking ka medal milega toh tu gold layega. 🥇",
+    "Your playlist makes no sense, kabhi Arijit, kabhi Heavy Metal. Emotional roller coaster. 🎢",
     "Professional procrastinator with a degree in 'I'll do it later'."
   ],
   chaos: {
     modes: ['Glitch', 'Emoji Rain', 'Screen Shake', 'Color Shift']
   },
-  gallery: [
-    { type: 'image', color: '#fb923c', caption: 'Sunset Vibes 🌅' },
-    { type: 'image', color: '#2dd4bf', caption: 'Ocean Breeze 🌊' },
-    { type: 'image', color: '#facc15', caption: 'Chilling 🍹' },
-    { type: 'image', color: '#fbcfe8', caption: 'Memories 💖' },
-    { type: 'image', color: '#818cf8', caption: 'Night Owls 🦉' },
-    { type: 'image', color: '#34d399', caption: 'Adventure 🌴' },
+  fun: {
+    eightBall: [
+      "Ask again after coffee ☕",
+      "The stars say NO 🌟",
+      "Absolutely (if you bribe me)",
+      "Maybe... but at what cost?",
+      "Outlook chaotic 🌪️",
+      "Yes, queen/king 👑",
+      "Don't count on it 📉",
+      "Follow your vibes 🎵"
+    ],
+    challenges: [
+      "Go 1 hour without complaining 🤐",
+      "Compliment yourself in the mirror immediately 🪞",
+      "Send a random emoji to the 3rd person in your chat list 📱",
+      "Drink a glass of water, you dehydrated plant 🌱",
+      "Do 5 jumping jacks right now 🏃",
+      "Text your mom you love her ❤️",
+      "Listen to a song you hate completely 🎧"
+    ]
+  },
+  appreciation: [
+    { id: 1, text: "Thank you for being the brother I never asked for but always needed. 👫" },
+    { id: 2, text: "For listening to my rants without judging (much). 🗣️" },
+    { id: 3, text: "You turn up even when it's inconvenient. That's real. 🤝" },
+    { id: 4, text: "Thanks for always keeping it 100 with me. 💯" },
+    { id: 5, text: "Glad we're friends in this chaotic universe. 🌌" },
+    { id: 6, text: "Your advice is terrible but I appreciate the spirit. 😂" },
+    { id: 7, text: "A true friend is someone who thinks you're a good egg even though you're slightly cracked. 🥚" },
+    { id: 8, text: "Cheers to more years of roasting each other. 🥂" }
   ]
+
 };

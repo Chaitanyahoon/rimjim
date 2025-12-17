@@ -1,26 +1,26 @@
 <script>
-  import { scale } from 'svelte/transition';
-  import { spring } from 'svelte/motion';
-  import { rimjimData } from '../data';
-  import { inview } from '../actions';
+  import { scale } from "svelte/transition";
+  import { spring } from "svelte/motion";
+  import { rimjimData } from "../data";
+  import { inview } from "../actions";
 
   let visible = false;
 </script>
 
-<section 
+<section
   class="tiny-section"
   use:inview={{ threshold: 0.2 }}
-  on:enter={() => visible = true}
+  on:enter={() => (visible = true)}
 >
   <div class="container">
     <h2 class="section-title">Tiny Rimjim Things 🧸</h2>
-    
+
     <div class="grid">
       {#if visible}
         {#each rimjimData.tinyThings as item, i}
-          <div 
+          <div
             class="tiny-item"
-            in:scale="{{ duration: 400, delay: 300 + (i * 100), start: 0.5 }}"
+            in:scale={{ duration: 400, delay: 300 + i * 100, start: 0.5 }}
           >
             <span class="emoji">{item.emoji}</span>
             <p>{item.text}</p>
@@ -33,8 +33,9 @@
 
 <style>
   .tiny-section {
-    padding: 6rem 2rem;
+    padding: 1rem 1rem; /* Reduced from 6rem 2rem */
     text-align: center;
+    width: 100%;
   }
 
   .container {
@@ -43,8 +44,8 @@
   }
 
   .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2rem; /* Reduced from 2.5rem */
+    margin-bottom: 1.5rem; /* Reduced from 3rem */
   }
 
   .grid {
