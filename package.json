@@ -1,0 +1,27 @@
+{
+	"name": "rimjim",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.2.2",
+		"@sveltejs/kit": "^2.5.25",
+		"@sveltejs/vite-plugin-svelte": "^3.1.2",
+		"@types/canvas-confetti": "^1.9.0",
+		"svelte": "^4.2.19",
+		"svelte-check": "^4.3.4",
+		"typescript": "^5.9.3",
+		"vite": "^5.4.2"
+	},
+	"dependencies": {
+		"canvas-confetti": "^1.9.4"
+	}
+}

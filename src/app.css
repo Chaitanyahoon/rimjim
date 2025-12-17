@@ -1,0 +1,73 @@
+:root {
+  --bg-dark: #fdf2f8;
+  /* Very light pink/cream background */
+  --bg-card: #ffffff;
+  --text-primary: #475569;
+  /* Slate 600 */
+  --text-secondary: #94a3b8;
+  /* Slate 400 */
+
+  /* Pastel Palette */
+  --accent-primary: #c4b5fd;
+  /* Pastel Purple */
+  --accent-secondary: #fbcfe8;
+  /* Pastel Pink */
+  --accent-warm: #fde68a;
+  /* Pastel Yellow */
+  --accent-cool: #bae6fd;
+  /* Pastel Blue */
+  --accent-green: #bbf7d0;
+  /* Pastel Green */
+
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius-lg: 2rem;
+  --radius-md: 1.5rem;
+
+  --shadow-soft: 0 10px 30px -10px rgba(196, 181, 253, 0.3);
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  height: 100%;
+  overflow: hidden;
+  /* Prevent global scroll for the app feel */
+}
+
+body {
+  height: 100%;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  color: #334155;
+  /* Darker slate for headings */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
