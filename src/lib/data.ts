@@ -45,5 +45,13 @@ export const rimjimData = {
   ],
   chaos: {
     modes: ['Glitch', 'Emoji Rain', 'Screen Shake', 'Color Shift']
-  }
+  },
+  gallery: [
+    { type: 'image', color: '#fb923c', caption: 'Sunset Vibes 🌅' },
+    { type: 'image', color: '#2dd4bf', caption: 'Ocean Breeze 🌊' },
+    { type: 'image', color: '#facc15', caption: 'Chilling 🍹' },
+    { type: 'image', color: '#fbcfe8', caption: 'Memories 💖' },
+    { type: 'image', color: '#818cf8', caption: 'Night Owls 🦉' },
+    { type: 'image', color: '#34d399', caption: 'Adventure 🌴' },
+  ]
 };

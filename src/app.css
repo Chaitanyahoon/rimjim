@@ -1,31 +1,34 @@
 :root {
-  --bg-dark: #fdf2f8;
-  /* Very light pink/cream background */
+  /* Tropical Day Theme */
+  --bg-dark: #fff7ed;
+  /* Orange-50 (Warm Cream) */
   --bg-card: #ffffff;
-  --text-primary: #475569;
-  /* Slate 600 */
-  --text-secondary: #94a3b8;
-  /* Slate 400 */
+  /* White */
+  --text-primary: #1e293b;
+  /* Slate-800 */
+  --text-secondary: #64748b;
+  /* Slate-500 */
 
-  /* Pastel Palette */
-  --accent-primary: #c4b5fd;
-  /* Pastel Purple */
-  --accent-secondary: #fbcfe8;
-  /* Pastel Pink */
-  --accent-warm: #fde68a;
-  /* Pastel Yellow */
-  --accent-cool: #bae6fd;
-  /* Pastel Blue */
-  --accent-green: #bbf7d0;
-  /* Pastel Green */
+  /* Vivid Accents */
+  --accent-primary: #ec4899;
+  /* Pink-500 (Hot Pink) */
+  --accent-secondary: #0d9488;
+  /* Teal-600 (Darker Teal for contrast) */
+  --accent-warm: #f59e0b;
+  /* Amber-500 (Honey) */
+  --accent-cool: #6366f1;
+  /* Indigo-500 */
+  --accent-green: #10b981;
+  /* Emerald-500 */
 
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Outfit', 'Inter', system-ui, sans-serif;
 
   --radius-lg: 2rem;
   --radius-md: 1.5rem;
 
-  --shadow-soft: 0 10px 30px -10px rgba(196, 181, 253, 0.3);
-  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-soft: 0 10px 40px -10px rgba(236, 72, 153, 0.2);
+  /* Pink glow */
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
 }
 
 *,
@@ -42,7 +45,6 @@ html {
   color: var(--text-primary);
   height: 100%;
   overflow: hidden;
-  /* Prevent global scroll for the app feel */
 }
 
 body {
@@ -56,8 +58,7 @@ h2,
 h3,
 h4 {
   line-height: 1.2;
-  color: #334155;
-  /* Darker slate for headings */
+  color: var(--text-primary);
 }
 
 a {

@@ -6,6 +6,7 @@
   
   import HomeView from '$lib/views/HomeView.svelte';
   import RoastView from '$lib/views/RoastView.svelte';
+  import GalleryView from '$lib/views/GalleryView.svelte';
   import VibeView from '$lib/views/VibeView.svelte';
   import BirthdayView from '$lib/views/BirthdayView.svelte';
 </script>
@@ -19,6 +20,8 @@
         <HomeView />
       {:else if $currentView === 'roast'}
         <RoastView />
+      {:else if $currentView === 'gallery'}
+        <GalleryView />
       {:else if $currentView === 'vibe'}
         <VibeView />
       {:else if $currentView === 'birthday'}

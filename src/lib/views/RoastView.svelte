@@ -50,9 +50,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem 1rem 8rem 1rem; /* Bottom padding for Dock */
+    padding: 2rem 1rem 15rem 1rem; /* Clear Dock */
     overflow-y: auto;
+    width: 100%;
   }
 
   .card {

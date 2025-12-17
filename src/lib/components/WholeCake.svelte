@@ -23,7 +23,7 @@
              particleCount: 200,
              spread: 100,
              origin: { y: 0.6 },
-             colors: ['#c4b5fd', '#fbcfe8', '#fde68a'] // Pastel confetti
+             colors: ['#fb923c', '#2dd4bf', '#facc15'] // Tropical confetti
           });
         }, 500);
       }
@@ -98,14 +98,14 @@
   .layer-bottom {
     height: 50px;
     bottom: 10px;
-    background: #fbcfe8; /* Pink sponge */
-    border-bottom: 5px solid #f9a8d4;
+    background: #fb923c; /* Coral sponge */
+    border-bottom: 5px solid #ea580c;
   }
 
   .layer-middle {
     height: 40px;
     bottom: 60px;
-    background: #fdf2f8; /* Cream filling */
+    background: #ffedd5; /* Cream filling */
     width: 90%;
     left: 5%;
   }
@@ -113,7 +113,7 @@
   .layer-top {
     height: 50px;
     bottom: 100px;
-    background: #fbcfe8;
+    background: #fb923c;
     width: 100%;
     border-radius: 10px 10px 5px 5px;
   }
@@ -124,14 +124,12 @@
     left: -5px;
     width: 260px;
     height: 60px;
-    background: #8b5cf6; /* Purple icing */
     border-radius: 30px 30px 10px 10px;
     z-index: 2;
-    background: radial-gradient(circle at 20px 0, #a78bfa 15px, transparent 16px) repeat-x;
+    background: radial-gradient(circle at 20px 0, #5eead4 15px, transparent 16px) repeat-x;
     background-size: 40px 60px; 
     top: -15px;
-    /* Simplification: Just a solid block for icing with rounded top */
-    background: #c4b5fd;
+    background: #2dd4bf; /* Teal icing */
     transform: translateY(-5px);
   }
 

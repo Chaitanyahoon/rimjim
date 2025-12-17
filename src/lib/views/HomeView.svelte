@@ -78,7 +78,7 @@
     align-items: center;
     position: relative;
     overflow-y: auto;
-    padding-bottom: 8rem; /* Dock space */
+    padding-bottom: 15rem; /* Massive padding to clear Dock */
   }
 
   .hero-content {

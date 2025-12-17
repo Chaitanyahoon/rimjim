@@ -62,9 +62,10 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem 8rem 1rem;
+    padding: 2rem 1rem 15rem 1rem; /* Clear Dock */
     overflow-y: auto;
     align-items: center;
+    width: 100%;
   }
 
   .player-container {

@@ -29,7 +29,13 @@
     // Actually, background is transparent to let CSS background show, stars are white/colored
     
     stars.forEach(star => {
-      ctx.fillStyle = `rgba(196, 181, 253, ${star.alpha})`; // Pastel Purple Stars
+      // Vivid Confetti/Pollen colors
+      const colorType = Math.random();
+      if (colorType > 0.75) ctx.fillStyle = `rgba(236, 72, 153, ${star.alpha})`; // Pink
+      else if (colorType > 0.5) ctx.fillStyle = `rgba(245, 158, 11, ${star.alpha})`; // Amber
+      else if (colorType > 0.25) ctx.fillStyle = `rgba(13, 148, 136, ${star.alpha})`; // Teal
+      else ctx.fillStyle = `rgba(99, 102, 241, ${star.alpha})`; // Indigo
+
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
       ctx.fill();
